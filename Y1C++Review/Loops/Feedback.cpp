@@ -43,26 +43,26 @@ int main()
 	class. In my opinion, the modulus is without a doubt the hardest concept to understandand moreso implement
 	correctly due to it's behaviour However once that is figured out I don't think they will have a problem.
 	*/
-	
+
 	////////////////////////////////////////////////ENDCOMMENTS/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	//1. What is the out put of the following code samples?
 	//a. 
 	for (int i = 0; i < 100; i++)
 	{
-		std::cout << i << std::endl;
+		cout << i << endl;
 	}
-	
+
 	//b. 
 	for (int i = 100; i >= 0; i -= 2)
 	{
-		std::cout << i << std::endl;
+		cout << i << endl;
 	}
 	//c. 
 	int iter = 0;
 	while (iter != 25)
 	{
-		std::cout << iter << std::endl;
+		cout << iter << endl;
 		iter += 5;
 	}
 	//d. 
@@ -72,9 +72,9 @@ int main()
 		counter++;
 		if (counter == 1)
 			break;
-		else
-			std::cout << counter << std::endl;
-	} while (counter < 10);
+		cout << counter << endl;
+	}
+	while (counter < 10);
 
 	//2. Using a for loop, iterate through numbers 0 to 100.
 	//-For multiples of 3 print “Fizz”
@@ -84,7 +84,6 @@ int main()
 	//Note, you will need to use the modulus operator (%)
 	for (int i = 0; i <= 100; i++)
 	{
-
 		if (i % 3 == 0)
 			cout << "fizz" << endl;
 		else if (i % 5 == 0)
@@ -99,13 +98,13 @@ int main()
 	//3. Repeat problem 2 using a while loop and a do while loop.
 	//while loop
 	iter = 0;
-	while(iter != 101)
+	while (iter <= 100)
 	{
 		if (iter % 3 == 0)
 			cout << "fizz" << endl;
-		if (iter % 5 == 0)
+		else if (iter % 5 == 0)
 			cout << "buzz" << endl;
-		if (iter % 3 == 0 && iter % 5 == 0)
+		else if (iter % 3 == 0 && iter % 5 == 0)
 			cout << "fizzbuzz" << endl;
 		else
 			cout << iter << endl;
@@ -114,8 +113,9 @@ int main()
 
 	iter = 0;
 
-	Do{
-		if (iter % 3 == 0)
+	do
+	{
+	if (iter % 3 == 0)
 		cout << "fizz" << endl;
 	if (iter % 5 == 0)
 		cout << "buzz" << endl;
@@ -123,8 +123,12 @@ int main()
 		cout << "fizzbuzz" << endl;
 	else
 		cout << iter << endl;
-	}while (iter != 100)
+		iter++; 
+	}
+	while (iter <= 100);
 	//4. Create a loop that prints all even numbers between 0 and 100, without printing 0 or 100
+	
+	
 	system("pause");
 	return 0;
 }
