@@ -98,15 +98,15 @@ int main()
 	//Note, you will need to use the modulus operator (%)
 	for (int i = 0; i <= 100; i++)
 	{
-
-		if (i % 3 == 0)
+		if (iter % 3 == 0 && iter % 5 != 0)
 			cout << "fizz" << endl;
-		else if (i % 5 == 0)
+		else if (iter % 5 == 0 && iter % 3 != 0)
 			cout << "buzz" << endl;
-		else if (i % 3 == 0 && i % 5 == 0)
+		else if (iter % 3 == 0 && iter % 5 == 0)
 			cout << "fizzbuzz" << endl;
 		else
-			cout << i << endl;
+			cout << iter << endl;
+		iter++;
 	}
 
 	//3. Repeat problem 2 using a while loop and a do while loop.
