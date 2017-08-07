@@ -94,15 +94,8 @@ int main()
 	//- For multiples of 5 print ìBuzzÅE
 	//- For multiples of 3 and 5 print ìFizzBuzzÅE
 	//- Otherwise print the number.
+	
 	//Note, you will need to use the modulus operator (%)
-
-
-	//3. Repeat problem 2 using a while loop and a do while loop.
-	//while loop
-
-
-	//4. Create a loop that prints all even numbers between 0 and 100, without printing 0 or 100
-
 	for (int i = 0; i <= 100; i++)
 	{
 
@@ -116,6 +109,39 @@ int main()
 			cout << i << endl;
 	}
 
+	//3. Repeat problem 2 using a while loop and a do while loop.
+	//while loop
+	iter = 0;
+	while (iter < 100)
+	{
+		if (iter % 3 == 0 && iter % 5 != 0)
+			cout << "fizz" << endl;
+		else if (iter % 5 == 0 && iter % 3 != 0)
+			cout << "buzz" << endl;
+		else if (iter % 3 == 0 && iter % 5 == 0)
+			cout << "fizzbuzz" << endl;
+		else
+			cout << iter << endl;
+		iter++;
+	}
+	iter = 0;
+	do
+	{
+		if (iter % 3 == 0 && iter % 5 != 0)
+			cout << "fizz" << endl;
+		else if (iter % 5 == 0 && iter % 3 != 0)
+			cout << "buzz" << endl;
+		else if (iter % 3 == 0 && iter % 5 == 0)
+			cout << "fizzbuzz" << endl;
+		else
+			cout << iter << endl;
+		iter++;
+	} while (iter < 100);
+		//4. Create a loop that prints all even numbers between 0 and 100, without printing 0 or 100
+	for(int i = 1; i <100; i++)
+	{
+		cout << i << endl;
+	}
 
 	system("pause");
 	return 0;
