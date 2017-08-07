@@ -1,6 +1,31 @@
 #include <iostream>
 
 using namespace std;
+///////////////////////////////COMMENTS////////////////////////////////////////////////////
+///
+///
+///
+/*
+This problem is a bit more difficult due to not only using everything up until that point, 
+but also throwing in a 2D array and nested for loop. I had some minor trouble when it came to 
+assigning a value from the 2D array to the variables "leastFoodEaten" and "mostFoodEaten". On initialization I
+had set their variables to equal foodEatenGraph[0][0] before assigning any value to the array 
+to the placeholder value which I think would be a bit confusing. To fix this I switched 
+the 2 integers' values to equal 0 on initialization and added a conditional that checks 
+for the very first loop iteration and then assigned the first integer in the array to them. It was not 
+difficult to follow the directions as they were straight forward and told you what to input
+almost step-by-step. When reading "The program should first have Dany input the user for each dragon" it would 
+be helpful to  explain what "user" is referring toas I needed to check your comments to see what I should input.
+The math is very basic and no one should have trouble with it. To sum it up, implementing this program is doable although 
+some students may struggle with things like assignment and ordering the contents of the 2D array but is not impossible and
+can be done given some thought.
+
+*/
+
+
+
+
+
 /*
 Week 1 Assignment:
 What you will need to know
@@ -23,10 +48,10 @@ int main()
 {
 
 	int foodEatenGraph[3][7];
-	int foodAvgAll = 0;
-	int dragonAvgPer[3];
+	float foodAvgAll = 0;
+	float foodAvgPer[3] = {0,0,0};
 	int mostFoodEaten = 0;
-	int leastfoodeaten = 0;
+	int leastFoodEaten = 0;
 	int dragonIDMost = 0;
 	int dragonIDLeast = 0;
 
@@ -37,11 +62,16 @@ int main()
 		{
 			cin >> foodEatenGraph[i][j];
 			foodAvgAll += foodEatenGraph[i][j];
-			dragonAvgPer[i] += foodEatenGraph[i][j];
-			if (leastfoodeaten > foodEatenGraph[i][j])
+			foodAvgPer[i] += foodEatenGraph[i][j];
+			if(foodEatenGraph[i][j] == foodEatenGraph[0][0])
+			{
+				mostFoodEaten = foodEatenGraph[0][0];
+				leastFoodEaten = foodEatenGraph[0][0];
+			}
+			if (leastFoodEaten > foodEatenGraph[i][j])
 			{
 				dragonIDLeast = i + 1;
-				leastfoodeaten = foodEatenGraph[i][j];
+				leastFoodEaten = foodEatenGraph[i][j];
 			}
 			if (mostFoodEaten < foodEatenGraph[i][j])
 			{
@@ -51,15 +81,13 @@ int main()
 		}
 	}
 	cout << "The average amount eaten by all dragons is: " << foodAvgAll / 21 << endl;
-
-	for (int i = 0; i < 3; i++)
+	for(int i = 0; i < 3; i++)
 	{
-		dragonAvgPer[i] = 7;
-		cout << "The average amount eaten by dragon " << i << " is: " << dragonAvgPer[1] << endl;
+		cout << "the average amount of food eaten by dragon " << i + 1 << " is " << foodAvgPer[i] << endl;
 	}
 	cout << "the most amount of food eaten in a day is: " << mostFoodEaten << " and was eaten by Dragon " << dragonIDMost << endl;
 
-	cout << "the least amount of food eaten in a day is:" << leastfoodeaten << " and was eaten by Dragon " << dragonIDLeast << endl;
+	cout << "the least amount of food eaten in a day is:" << leastFoodEaten << " and was eaten by Dragon " << dragonIDLeast << endl;
 
 	system("pause");
 	return 0;
