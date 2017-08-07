@@ -4,8 +4,9 @@ using namespace std;
 
 int main()
 {
-	/*
 	/////////////////////////////////////////////////COMMENTS//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/*
+	///
 	///
 	///
 
@@ -14,26 +15,28 @@ int main()
 
 	///
 
+	a: it shouldn't be hard to figure out this problem because you're simply having the current increment of iterator "i" output for each loop and adding 1 to the iterator
+	when it recycles. The only legitimate mistake I can see happening with this is forgetting to start at 0 and/or stop at 99
+
 	///
 
-	bF: This question should not be too difficult to answer either as the base format of the question is practically the same and though the iteration of the loop has been
+	b: This question should not be too difficult to answer either as the base format of the question is practically the same and though the iteration of the loop has been
 	altered a bit, it's still basic math and shouldn't be a challenge if you can understand the syntax and know how to subtract.  (NOTE: some students may become confused if
 	it isn't mentioned that increment operators can be used outside of for loops.)
 
 	///
-	///
 
-
-	cF: there should not be any problems with this problem given the students have an understanding of
+	c: there should not be any problems with this problem given the students have an understanding of
 	c++'s order of evaluation (otherwise they might think that the iterator needs to increment first
 	regardless of it's position).
 
 	///
 
-	dF: due to the way a dowhile loop is formatted, it should be obvious that it's just a while loop with the
+	d: due to the way a dowhile loop is formatted, it should be obvious that it's just a while loop with the
 	conditional check happening at the end of the iteration instead of the beginning. You may want to mention that
 	because of this you will run the first iteration regardless of the condition being met unless you hit a break
 	statement.
+	dA: there is no output as the break statement is hit on the very first increment.
 
 	///
 
@@ -50,21 +53,29 @@ int main()
 	//a. 
 	for (int i = 0; i < 100; i++)
 	{
-		cout << i << endl;
+		std::cout << i << std::endl;
 	}
+
+	//Answer: 0,1,2,3,...99
 
 	//b. 
 	for (int i = 100; i >= 0; i -= 2)
 	{
-		cout << i << endl;
+		std::cout << i << std::endl;
 	}
+
+	//Answer: 100, 98, 96, 94... 0
+
 	//c. 
 	int iter = 0;
 	while (iter != 25)
 	{
-		cout << iter << endl;
+		std::cout << iter << std::endl;
 		iter += 5;
 	}
+
+	//Answer: 0, 5, 10, 15, 20
+
 	//d. 
 	int counter = 0;
 	do
@@ -72,18 +83,29 @@ int main()
 		counter++;
 		if (counter == 1)
 			break;
-		cout << counter << endl;
-	}
-	while (counter < 10);
+		else
+			std::cout << counter << std::endl;
+	} while (counter < 10);
+	//Answer = nothing
+
 
 	//2. Using a for loop, iterate through numbers 0 to 100.
-	//-For multiples of 3 print “Fizz”
-	//- For multiples of 5 print “Buzz”
-	//- For multiples of 3 and 5 print “FizzBuzz”
+	//-For multiples of 3 print “FizzE
+	//- For multiples of 5 print “BuzzE
+	//- For multiples of 3 and 5 print “FizzBuzzE
 	//- Otherwise print the number.
 	//Note, you will need to use the modulus operator (%)
+
+
+	//3. Repeat problem 2 using a while loop and a do while loop.
+	//while loop
+
+
+	//4. Create a loop that prints all even numbers between 0 and 100, without printing 0 or 100
+
 	for (int i = 0; i <= 100; i++)
 	{
+
 		if (i % 3 == 0)
 			cout << "fizz" << endl;
 		else if (i % 5 == 0)
@@ -95,40 +117,25 @@ int main()
 	}
 
 
-	//3. Repeat problem 2 using a while loop and a do while loop.
-	//while loop
-	iter = 0;
-	while (iter <= 100)
-	{
-		if (iter % 3 == 0)
-			cout << "fizz" << endl;
-		else if (iter % 5 == 0)
-			cout << "buzz" << endl;
-		else if (iter % 3 == 0 && iter % 5 == 0)
-			cout << "fizzbuzz" << endl;
-		else
-			cout << iter << endl;
-		iter++;
-	}
-
-	iter = 0;
-
-	do
-	{
-	if (iter % 3 == 0)
-		cout << "fizz" << endl;
-	if (iter % 5 == 0)
-		cout << "buzz" << endl;
-	if (iter % 3 == 0 && iter % 5 == 0)
-		cout << "fizzbuzz" << endl;
-	else
-		cout << iter << endl;
-		iter++; 
-	}
-	while (iter <= 100);
-	//4. Create a loop that prints all even numbers between 0 and 100, without printing 0 or 100
-	
-	
 	system("pause");
 	return 0;
 }
+#include <iostream>
+using namespace std;
+/*
+Week 1 Assignment:
+What you will need to know
+- Variables
+- Conditionals
+- Loops
+- arrays
+Daenerys Targaryen wants to keep track of how many kilos of food her three dragons eat
+each day during a typical week. Write a program that stores this information in a
+2 dimensional 3 x 7 array, where each row represents a different dragon and each column
+represents a different day of the week. The program should first have Dany input the user for
+each dragon. Then it should create a report that includes the following information:
+- Average amount of food eaten per day by all the dragons together
+- Average amount of food eaten per day by any one dragon
+- The greatest amount of food eaten during one day and which dragon that was
+- The least amount of food eaten during one day and which dragon that was
+*/
