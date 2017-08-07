@@ -83,7 +83,7 @@ int main()
 	cout << "The average amount eaten by all dragons is: " << foodAvgAll / 21 << endl;
 	for(int i = 0; i < 3; i++)
 	{
-		cout << "the average amount of food eaten by dragon " << i + 1 << " is " << foodAvgPer[i] << endl;
+		cout << "the average amount of food eaten by dragon " << i + 1 << " is " << foodAvgPer[i] / 7 << endl;
 	}
 	cout << "the most amount of food eaten in a day is: " << mostFoodEaten << " and was eaten by Dragon " << dragonIDMost << endl;
 
