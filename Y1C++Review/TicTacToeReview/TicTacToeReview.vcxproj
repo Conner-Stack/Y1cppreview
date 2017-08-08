@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{53D8D881-4452-44DB-ABB3-584D131C207D}</ProjectGuid>
-    <RootNamespace>Functions</RootNamespace>
+    <ProjectGuid>{9894F6DA-D937-47C1-B14E-C06E54F30275}</ProjectGuid>
+    <RootNamespace>TicTacToeReview</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,7 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ReviewFeedback.cpp" />
+    <ClCompile Include="TicTacToe Review.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

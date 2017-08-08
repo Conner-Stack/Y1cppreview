@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ReviewFeedback.cpp">
+    <ClCompile Include="TicTacToe Review.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

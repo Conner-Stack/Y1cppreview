@@ -90,13 +90,15 @@ float Array(float Array[], float arrayLength)
 //4. Using recursion write a function that prints out the Fibonacci sequence.
 void FibSeq(int a, int b)
 {
-	cout << a + b << endl;
-	FibSeq(b, a);
-	cout << b + a <<   endl;
 	
+	cout << a + b << endl;
+	a += b;
+	if (a != 377)
+	FibSeq(b, a);
 }
 
 int main()
 {
-
+	FibSeq(0, 1);
+	system("pause");
 }
